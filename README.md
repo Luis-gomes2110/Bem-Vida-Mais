@@ -40,7 +40,7 @@ O **BemVida+** é uma plataforma web centralizada desenvolvida para otimizar o g
 
 | Integrante | Papel no Scrum | GitHub |
 | :--- | :--- | :--- |
-| **Luís Henrique Gomes Cicone de Paula** | Scrum Master / Developer | [@seu-github](https://github.com/) |
+| **Luís Henrique Gomes Cicone de Paula** | Scrum Master / Developer |  |
 | **Matheus da Silva Zanchett** | Product Owner Developer |  |
 | **Vitor Alex Maximo freire** | Developer |  |
 
