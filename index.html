@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BemVida+ | Doe itens, transforme realidades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho público: usado em todas as páginas fora da área logada -->
+  <header class="cabecalho-publico">
+    <span class="logo">BemVida+</span>
+    <nav class="nav-publica">
+      <a href="index.html" class="ativo">Início</a>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="campanhas.html">Campanhas</a>
+    </nav>
+    <div class="acoes-cabecalho">
+      <a href="login.html" class="botao botao-secundario">Login</a>
+      <a href="cadastro.html" class="botao botao-escuro">Cadastro</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="secao">
+    <div class="container duas-colunas" style="display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:center;">
+      <div>
+        <span class="eyebrow">PÁGINA INICIAL</span>
+        <h1 style="font-size:2.2rem;">Doe itens. Transforme realidades.</h1>
+        <p>Encontre campanhas de ONGs e associações que precisam de roupas, alimentos e itens de higiene.</p>
+        <div style="display:flex; gap:12px;">
+          <a href="campanhas.html" class="botao botao-escuro">Ver campanhas</a>
+          <a href="quem-somos.html" class="botao botao-secundario">Conheça o projeto</a>
+        </div>
+      </div>
+      <div class="img-placeholder" style="height:280px;">[ banner em destaque ]</div>
+    </div>
+  </section>
+
+  <!-- Campanhas em destaque -->
+  <section class="secao secao-alt">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:24px;">
+        <div>
+          <span class="eyebrow">CAMPANHAS</span>
+          <h2>Campanhas em destaque</h2>
+        </div>
+        <a href="campanhas.html" style="font-size:0.9rem; color:var(--texto-secundario);">[ ver todas ]</a>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
+
+        <div class="card card-campanha">
+          <div class="img-placeholder">[ imagem ]</div>
+          <span class="eyebrow">ALIMENTOS</span>
+          <h3>Cestas para famílias</h3>
+          <div class="barra-progresso"><span style="width:70%;"></span></div>
+          <div class="progresso-texto">
+            <span>210 de 300 itens recebidos</span>
+            <span>70%</span>
+          </div>
+          <div class="acoes">
+            <a href="campanha-detalhes.html" class="botao botao-escuro">Doar</a>
+            <a href="campanha-detalhes.html" class="botao botao-secundario">Ver mais</a>
+          </div>
+        </div>
+
+        <div class="card card-campanha">
+          <div class="img-placeholder">[ imagem ]</div>
+          <span class="eyebrow">ROUPAS</span>
+          <h3>Agasalhos para o inverno</h3>
+          <div class="barra-progresso"><span style="width:70%;"></span></div>
+          <div class="progresso-texto">
+            <span>84 de 120 itens recebidos</span>
+            <span>70%</span>
+          </div>
+          <div class="acoes">
+            <a href="campanha-detalhes.html" class="botao botao-escuro">Doar</a>
+            <a href="campanha-detalhes.html" class="botao botao-secundario">Ver mais</a>
+          </div>
+        </div>
+
+        <div class="card card-campanha">
+          <div class="img-placeholder">[ imagem ]</div>
+          <span class="eyebrow">HIGIENE</span>
+          <h3>Kits de cuidado pessoal</h3>
+          <div class="barra-progresso"><span style="width:54%;"></span></div>
+          <div class="progresso-texto">
+            <span>135 de 250 itens recebidos</span>
+            <span>54%</span>
+          </div>
+          <div class="acoes">
+            <a href="campanha-detalhes.html" class="botao botao-escuro">Doar</a>
+            <a href="campanha-detalhes.html" class="botao botao-secundario">Ver mais</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="secao">
+    <div class="container">
+      <span class="eyebrow">COMO FUNCIONA</span>
+      <h2 style="margin-bottom:24px;">Uma rede de solidariedade</h2>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
+        <div class="card" style="padding:20px;">
+          <span class="eyebrow">01</span>
+          <h3 style="font-size:1rem;">Para Doadores</h3>
+          <p>Escolha uma campanha e informe os itens físicos que deseja entregar.</p>
+        </div>
+        <div class="card" style="padding:20px;">
+          <span class="eyebrow">02</span>
+          <h3 style="font-size:1rem;">Para ONGs</h3>
+          <p>Divulgue necessidades reais e acompanhe os itens recebidos.</p>
+        </div>
+        <div class="card" style="padding:20px;">
+          <span class="eyebrow">03</span>
+          <h3 style="font-size:1rem;">Nossa Missão</h3>
+          <p>Aproximar pessoas e instituições com transparência e organização.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada final -->
+  <section class="secao secao-alt">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <span class="eyebrow">PARTICIPE</span>
+        <h2 style="margin-bottom:0;">Encontre uma campanha para apoiar</h2>
+      </div>
+      <a href="campanhas.html" class="botao botao-escuro">Ver todas as campanhas</a>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    [ links institucionais · contato · termos ]
+  </footer>
+
+</body>
+</html>

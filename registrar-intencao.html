@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Intenção de Doação | BemVida+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="cabecalho-publico">
+    <span class="logo">BemVida+</span>
+    <nav class="nav-publica">
+      <a href="index.html">Início</a>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="campanhas.html">Campanhas</a>
+    </nav>
+    <div class="acoes-cabecalho">
+      <a href="login.html" class="botao botao-secundario">Login</a>
+      <a href="cadastro.html" class="botao botao-escuro">Cadastro</a>
+    </div>
+  </header>
+
+  <section class="secao secao-alt">
+    <div class="container">
+      <span class="eyebrow">DOAÇÃO DE ITENS</span>
+      <h1>Registrar intenção de doação</h1>
+
+      <div class="card" style="padding:32px; max-width:640px;">
+        <p style="margin-bottom:20px;">Campanha: <strong style="color:var(--texto-titulo);">Cestas para famílias</strong></p>
+
+        <!-- No protótipo estático o formulário não envia dados de verdade.
+             Ele só leva para a tela de confirmação. -->
+        <form action="intencao-confirmada.html">
+          <div class="grade-formulario">
+            <div class="campo-formulario" style="grid-column: 1 / -1;">
+              <label for="itens">Quais itens deseja doar?</label>
+              <textarea id="itens" rows="3" placeholder="ex.: arroz, feijão e leite"></textarea>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="quantidade">Quantidade estimada</label>
+              <input type="text" id="quantidade" placeholder="quantidade de itens">
+              <span class="ajuda">Informe o total aproximado de unidades.</span>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="contato-forma">Forma de contato</label>
+              <select id="contato-forma">
+                <option>Telefone</option>
+                <option>E-mail</option>
+              </select>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="contato">Telefone / E-mail</label>
+              <input type="text" id="contato" placeholder="seu contato">
+            </div>
+
+            <div class="campo-formulario">
+              <label for="observacoes">Observações</label>
+              <textarea id="observacoes" rows="2" placeholder="informações adicionais"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="botao botao-escuro" style="border:none;">Confirmar Intenção</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    [ links institucionais · contato · termos ]
+  </footer>
+
+</body>
+</html>
