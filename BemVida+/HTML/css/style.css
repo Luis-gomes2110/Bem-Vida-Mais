@@ -117,6 +117,15 @@ hr {
   font-family: var(--fonte-titulo);
   font-weight: 700;
   font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+  display: block;
 }
 
 .nav-publica {
@@ -489,14 +498,10 @@ hr {
 }
 
 .icone-auth {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: block;
   margin: 0 auto 20px;
-  background: linear-gradient(135deg, var(--verde-principal), var(--azul-turquesa));
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .cartao-auth h1 {
