@@ -1,26 +1,32 @@
 /* ==========================================================================
-   BemVida+ — Folha de estilos base
+   BemVida+ — Landing Page de apresentação do Projeto Integrador
+   Esta folha de estilo é independente da usada dentro de /sistema —
+   a landing page é uma peça separada (site institucional do PI),
+   mas reaproveita a mesma identidade visual (cores, tipografia, botões).
+
    Organização:
    1. Variáveis (identidade visual)
    2. Reset e base
-   3. Layout (container, grid)
-   4. Cabeçalho público / rodapé
+   3. Layout
+   4. Cabeçalho
    5. Botões
-   6. Cards e placeholders de imagem
-   7. Formulários
-   8. Área logada (sidebar + painel)
-   9. Responsivo
+   6. Hero
+   7. Cards genéricos
+   8. Como funciona (etapas)
+   9. Público-alvo / Perfis
+   10. Transparência (destaque)
+   11. Equipe / Tecnologias
+   12. CTA final / Rodapé
+   13. Responsivo
    ========================================================================== */
 
-/* 1. Variáveis
-   Todas as cores vêm da paleta oficial definida pela equipe.
-   Trocar uma cor aqui reflete no site inteiro. */
+/* 1. Variáveis */
 :root {
-  --verde-principal: #0E7E52;   /* fundo do painel lateral (área logada) */
-  --azul-turquesa: #2A93A6;     /* usado em gradiente com o verde principal */
-  --verde-acao: #10A153;        /* botões de ação primária */
-  --verde-claro: #258F63;       /* destaque/chip dentro do painel lateral */
-  --coral-destaque: #E8615A;    /* estimado a partir do logo — confirmar hex exato com a equipe */
+  --verde-principal: #0E7E52;
+  --azul-turquesa: #2A93A6;
+  --verde-acao: #10A153;
+  --verde-claro: #258F63;
+  --coral-destaque: #E8615A; /* estimado a partir do logo — confirmar hex exato com a equipe */
 
   --branco: #FFFFFF;
   --fundo-geral: #F7F9F8;
@@ -49,7 +55,7 @@ body {
   font-family: var(--fonte-texto);
   color: var(--texto-titulo);
   background-color: var(--fundo-geral);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
@@ -73,21 +79,15 @@ img {
   display: block;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid var(--borda);
-  margin: 32px 0;
-}
-
 /* 3. Layout */
 .container {
-  max-width: 1160px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .secao {
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .secao-alt {
@@ -96,14 +96,26 @@ hr {
 
 .eyebrow {
   font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--texto-secundario);
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--verde-acao);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
   display: block;
+  text-transform: uppercase;
 }
 
-/* 4. Cabeçalho público / rodapé */
+.titulo-secao {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.texto-centralizado {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* 4. Cabeçalho */
 .cabecalho-publico {
   display: flex;
   align-items: center;
@@ -111,12 +123,23 @@ hr {
   padding: 16px 24px;
   background-color: var(--branco);
   border-bottom: 1px solid var(--borda);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
   font-family: var(--fonte-titulo);
   font-weight: 700;
   font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
 }
 
 .nav-publica {
@@ -127,37 +150,21 @@ hr {
 .nav-publica a {
   font-weight: 500;
   color: var(--texto-secundario);
-  padding-bottom: 4px;
+  font-size: 0.95rem;
 }
 
-.nav-publica a.ativo {
+.nav-publica a:hover {
   color: var(--texto-titulo);
-  font-weight: 600;
-  border-bottom: 2px solid var(--verde-acao);
-}
-
-.acoes-cabecalho {
-  display: flex;
-  gap: 12px;
-}
-
-.rodape {
-  text-align: center;
-  padding: 24px;
-  color: var(--texto-placeholder);
-  font-size: 0.85rem;
-  border-top: 1px solid var(--borda);
-  background-color: var(--branco);
 }
 
 /* 5. Botões */
 .botao {
   display: inline-block;
-  padding: 12px 22px;
+  padding: 13px 26px;
   border-radius: var(--raio);
   font-family: var(--fonte-texto);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   cursor: pointer;
   border: 1px solid transparent;
   text-align: center;
@@ -179,367 +186,284 @@ hr {
   color: var(--texto-titulo);
 }
 
-/* 6. Cards e placeholders de imagem */
+/* 6. Hero */
+.hero {
+  padding: 96px 0 80px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(14, 126, 82, 0.08), transparent 45%),
+    radial-gradient(circle at 88% 15%, rgba(42, 147, 166, 0.08), transparent 45%),
+    var(--fundo-geral);
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+}
+
+.hero .subtitulo {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--verde-principal);
+  margin-bottom: 14px;
+}
+
+.hero .acoes {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo img {
+  width: 260px;
+  height: 260px;
+  filter: drop-shadow(0 16px 32px rgba(14, 126, 82, 0.20));
+}
+
+/* 7. Cards genéricos */
 .card {
   background-color: var(--branco);
   border: 1px solid var(--borda);
-  border-radius: var(--raio);
+  border-radius: 12px;
+  padding: 28px;
   box-shadow: var(--sombra);
 }
 
-.img-placeholder {
-  background-color: var(--input-bg);
-  background-image:
-    linear-gradient(45deg, transparent 48%, var(--borda) 49%, var(--borda) 51%, transparent 52%),
-    linear-gradient(-45deg, transparent 48%, var(--borda) 49%, var(--borda) 51%, transparent 52%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--texto-placeholder);
-  font-size: 0.8rem;
-  border: 1px solid var(--borda);
-  border-radius: var(--raio);
-}
-
-.tag {
-  display: inline-block;
-  background-color: var(--verde-claro);
-  color: var(--branco);
-  padding: 5px 12px;
-  border-radius: var(--raio-pill);
-  font-size: 0.8rem;
-  font-weight: 500;
-  margin: 0 8px 8px 0;
-}
-
-/* Card de campanha (usado na home e, futuramente, na listagem de campanhas) */
-.card-campanha {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-campanha .img-placeholder {
-  height: 140px;
-  margin-bottom: 12px;
-}
-
-.card-campanha .eyebrow {
-  margin-bottom: 4px;
-}
-
-.card-campanha h3 {
-  font-size: 1.05rem;
-  margin-bottom: 12px;
-}
-
-.barra-progresso {
-  height: 6px;
-  background-color: var(--input-bg);
-  border-radius: var(--raio-pill);
-  overflow: hidden;
-  margin-bottom: 6px;
-}
-
-.barra-progresso span {
-  display: block;
-  height: 100%;
-  background-color: var(--verde-acao);
-}
-
-.progresso-texto {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.8rem;
-  color: var(--texto-secundario);
-  margin-bottom: 16px;
-}
-
-.card-campanha .acoes {
-  display: flex;
-  gap: 8px;
-  margin-top: auto;
-}
-
-.card-campanha .acoes .botao {
-  flex: 1;
-  padding: 10px;
-}
-
-/* 7. Formulários */
-.campo-formulario {
-  margin-bottom: 20px;
-}
-
-.campo-formulario label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--texto-secundario);
-  letter-spacing: 0.03em;
-  margin-bottom: 6px;
-}
-
-.campo-formulario input,
-.campo-formulario textarea,
-.campo-formulario select {
-  width: 100%;
-  padding: 12px;
-  background-color: var(--input-bg);
-  border: 1px solid var(--borda);
-  border-radius: var(--raio);
-  font-family: var(--fonte-texto);
-  font-size: 0.95rem;
-  color: var(--texto-titulo);
-}
-
-.campo-formulario input::placeholder,
-.campo-formulario textarea::placeholder {
-  color: var(--texto-placeholder);
-}
-
-.campo-formulario .ajuda {
-  font-size: 0.78rem;
-  color: var(--texto-placeholder);
-  margin-top: 4px;
-}
-
-.grade-formulario {
+.grade-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-/* 8. Área logada (sidebar + painel) */
-.layout-logado {
+.grade-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.icone-linha {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(16, 161, 83, 0.1);
   display: flex;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
-.sidebar-doador {
-  width: 240px;
-  flex-shrink: 0;
-  background: linear-gradient(180deg, var(--verde-principal), var(--azul-turquesa));
+.icone-linha svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--verde-acao);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+/* 8. Como funciona (etapas) */
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  counter-reset: etapa;
+}
+
+.etapa {
+  text-align: center;
+  position: relative;
+}
+
+.etapa-numero {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--verde-principal), var(--azul-turquesa));
   color: var(--branco);
-  padding: 24px 16px;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
 }
 
-.sidebar-doador .logo {
+.etapa h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.etapa p {
+  font-size: 0.88rem;
+}
+
+/* 9. Público-alvo / Perfis */
+.card-perfil {
+  text-align: center;
+}
+
+.card-perfil .icone-linha {
+  margin: 0 auto 16px;
+}
+
+/* 10. Transparência (destaque) */
+.secao-transparencia {
+  background: linear-gradient(135deg, var(--verde-principal), var(--azul-turquesa));
   color: var(--branco);
-  margin-bottom: 24px;
-  display: block;
-  padding: 0 8px;
+  text-align: center;
 }
 
-.sidebar-doador .rotulo-perfil {
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  opacity: 0.75;
-  padding: 0 8px;
+.secao-transparencia .eyebrow {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.secao-transparencia h2 {
+  color: var(--branco);
+}
+
+.secao-transparencia p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frase-destaque {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 600;
+  max-width: 680px;
+  margin: 28px auto 0;
+  line-height: 1.4;
+}
+
+/* 11. Equipe / Tecnologias */
+.card-equipe {
+  text-align: center;
+}
+
+.avatar-iniciais {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--verde-principal), var(--azul-turquesa));
+  color: var(--branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.card-equipe .papel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--verde-acao);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
   margin-bottom: 8px;
   display: block;
 }
 
-.menu-lateral a {
-  display: block;
-  padding: 10px 8px;
-  border-radius: var(--raio);
-  margin-bottom: 4px;
-  font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.9);
+.lista-tecnologias {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.menu-lateral a.ativo {
-  background-color: var(--verde-claro);
-  color: var(--branco);
+.badge-tecnologia {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-pill);
+  padding: 10px 20px;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
-.conteudo-principal {
-  flex: 1;
-  padding: 32px 40px;
-}
-
-.cabecalho-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.info-usuario {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.avatar-circulo {
-  width: 40px;
-  height: 40px;
+.badge-tecnologia .ponto {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: var(--input-bg);
+  background-color: var(--verde-acao);
 }
 
-.grade-resumo {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-.card-resumo {
-  padding: 18px;
-}
-
-.card-resumo .eyebrow {
-  margin-bottom: 6px;
-}
-
-.card-resumo .valor {
-  font-family: var(--fonte-titulo);
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.grade-atalhos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-.card-atalho {
+/* 12. CTA final / Rodapé */
+.cta-final {
+  text-align: center;
   background-color: var(--texto-titulo);
   color: var(--branco);
-  padding: 20px;
-  border-radius: var(--raio);
 }
 
-.card-atalho strong {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 6px;
+.cta-final h2 {
+  color: var(--branco);
 }
 
-.card-atalho span {
+.cta-final p {
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 520px;
+  margin: 0 auto 28px;
+}
+
+.rodape {
+  text-align: center;
+  padding: 32px 24px;
+  color: var(--texto-placeholder);
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  background-color: var(--branco);
+  border-top: 1px solid var(--borda);
 }
 
-.placeholder-linha {
-  height: 10px;
-  background-color: var(--input-bg);
-  border-radius: var(--raio-pill);
-  margin-bottom: 10px;
+.rodape a {
+  color: var(--texto-secundario);
+  font-weight: 600;
 }
 
-/* 9. Responsivo */
+/* 13. Responsivo */
 @media (max-width: 860px) {
-  .layout-logado {
-    flex-direction: column;
-  }
-
-  .sidebar-doador {
-    width: 100%;
-  }
-
-  .grade-resumo,
-  .grade-atalhos,
-  .grade-formulario {
+  .hero .container {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 700px) {
+  .hero-logo {
+    order: -1;
+  }
+
+  .hero-logo img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .grade-2,
+  .grade-3,
+  .etapas {
+    grid-template-columns: 1fr;
+  }
+
   .nav-publica {
     display: none;
   }
-
-  .duas-colunas {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* ==========================================================================
-   10. Telas de autenticação (Login / Cadastro)
-   Nível de acabamento mais próximo de alta fidelidade — usadas como
-   "vitrine" do protótipo, por isso recebem mais capricho visual que o
-   restante das telas em wireframe.
-   ========================================================================== */
-.pagina-auth {
-  min-height: calc(100vh - 65px); /* desconta a altura do cabeçalho */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 24px;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(14, 126, 82, 0.07), transparent 40%),
-    radial-gradient(circle at 85% 90%, rgba(42, 147, 166, 0.07), transparent 40%),
-    var(--fundo-geral);
-}
-
-.cartao-auth {
-  width: 100%;
-  max-width: 420px;
-  background-color: var(--branco);
-  border-radius: 16px;
-  padding: 40px 36px;
-  box-shadow: 0 8px 28px rgba(14, 126, 82, 0.10);
-  text-align: center;
-}
-
-.icone-auth {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  background: linear-gradient(135deg, var(--verde-principal), var(--azul-turquesa));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cartao-auth h1 {
-  font-size: 1.4rem;
-  margin-bottom: 6px;
-}
-
-.subtitulo-auth {
-  font-size: 0.9rem;
-  margin-bottom: 28px;
-}
-
-.cartao-auth form {
-  text-align: left;
-}
-
-.cartao-auth .campo-formulario input {
-  padding: 13px 14px;
-}
-
-.botao-bloco {
-  width: 100%;
-  border: none;
-  margin-bottom: 12px;
-}
-
-.rodape-auth {
-  margin-top: 20px;
-  font-size: 0.88rem;
-  color: var(--texto-secundario);
-}
-
-.rodape-auth a {
-  color: var(--verde-acao);
-  font-weight: 600;
-}
-
-.aviso-cadastro-ong {
-  background-color: var(--input-bg);
-  border-radius: var(--raio);
-  padding: 10px 14px;
-  font-size: 0.82rem;
-  color: var(--texto-secundario);
-  margin-bottom: 24px;
-  text-align: left;
 }

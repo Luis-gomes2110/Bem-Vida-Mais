@@ -3,144 +3,287 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BemVida+ | Doe itens, transforme realidades</title>
+  <title>BemVida+ | Projeto Integrador — Fatec</title>
+  <meta name="description" content="BemVida+: plataforma que conecta doadores, ONGs e associações para organizar e dar transparência a campanhas de doação de itens físicos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Cabeçalho público: usado em todas as páginas fora da área logada -->
+  <!-- Cabeçalho -->
   <header class="cabecalho-publico">
-    <span class="logo">BemVida+</span>
+    <a href="#topo" class="logo"><img src="img/logo.png" alt="BemVida+"> BemVida+</a>
     <nav class="nav-publica">
-      <a href="index.html" class="ativo">Início</a>
-      <a href="quem-somos.html">Quem Somos</a>
-      <a href="campanhas.html">Campanhas</a>
+      <a href="#sobre">O Projeto</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#equipe">Equipe</a>
     </nav>
-    <div class="acoes-cabecalho">
-      <a href="login.html" class="botao botao-secundario">Login</a>
-      <a href="cadastro.html" class="botao botao-escuro">Cadastro</a>
-    </div>
+    <a href="sistema/index.html" class="botao botao-escuro">Ver Protótipo</a>
   </header>
 
-  <!-- Hero -->
-  <section class="secao">
-    <div class="container duas-colunas" style="display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:center;">
+  <!-- 1. Hero -->
+  <section class="hero" id="topo">
+    <div class="container">
       <div>
-        <span class="eyebrow">PÁGINA INICIAL</span>
-        <h1 style="font-size:2.2rem;">Doe itens. Transforme realidades.</h1>
-        <p>Encontre campanhas de ONGs e associações que precisam de roupas, alimentos e itens de higiene.</p>
-        <div style="display:flex; gap:12px;">
-          <a href="campanhas.html" class="botao botao-escuro">Ver campanhas</a>
-          <a href="quem-somos.html" class="botao botao-secundario">Conheça o projeto</a>
+        <p class="subtitulo">Conectando quem quer ajudar a quem precisa.</p>
+        <h1>BemVida+</h1>
+        <p>Uma plataforma digital que aproxima doadores, ONGs e associações, facilitando a divulgação, o gerenciamento e o acompanhamento de campanhas de doação.</p>
+        <div class="acoes">
+          <a href="#sobre" class="botao botao-primario">Conheça o BemVida+</a>
+          <a href="sistema/index.html" class="botao botao-secundario">Ver Protótipo</a>
         </div>
       </div>
-      <div class="img-placeholder" style="height:280px;">[ banner em destaque ]</div>
+      <div class="hero-logo">
+        <img src="img/logo.png" alt="Logo BemVida+">
+      </div>
     </div>
   </section>
 
-  <!-- Campanhas em destaque -->
+  <!-- 2. O Problema -->
+  <section class="secao secao-alt">
+    <div class="container texto-centralizado">
+      <span class="eyebrow">O Problema</span>
+      <h2 class="titulo-secao">Quando ajudar não é tão simples quanto parece</h2>
+      <p>ONGs e associações podem encontrar dificuldades para divulgar campanhas, organizar as arrecadações e manter as informações atualizadas. Para os doadores, a falta de informações centralizadas pode dificultar o acompanhamento de suas contribuições e reduzir a confiança no processo.</p>
+    </div>
+  </section>
+
+  <!-- 3. Sobre o BemVida+ -->
+  <section class="secao" id="sobre">
+    <div class="container texto-centralizado">
+      <span class="eyebrow">O que é o BemVida+</span>
+      <h2 class="titulo-secao">Uma plataforma para aproximar e organizar</h2>
+      <p>O BemVida+ é uma plataforma digital desenvolvida para auxiliar ONGs e associações de bairro no gerenciamento de campanhas de doação, aproximando essas instituições das pessoas que desejam contribuir.</p>
+      <p>A plataforma centraliza informações sobre campanhas e permite o registro e acompanhamento de doações de itens físicos, tornando o processo mais organizado e transparente.</p>
+    </div>
+  </section>
+
+  <!-- 4. Objetivo + Público-alvo -->
   <section class="secao secao-alt">
     <div class="container">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:24px;">
-        <div>
-          <span class="eyebrow">CAMPANHAS</span>
-          <h2>Campanhas em destaque</h2>
-        </div>
-        <a href="campanhas.html" style="font-size:0.9rem; color:var(--texto-secundario);">[ ver todas ]</a>
+
+      <div class="texto-centralizado" style="margin-bottom:56px;">
+        <span class="eyebrow">Nosso Objetivo</span>
+        <h2 class="titulo-secao">Aproximar, organizar e dar transparência</h2>
+        <p>Facilitar a conexão entre doadores e instituições, permitindo o registro e acompanhamento das doações e promovendo maior transparência, credibilidade e confiança durante todo o processo.</p>
       </div>
 
-      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
+      <div class="texto-centralizado" style="margin-bottom:32px;">
+        <span class="eyebrow">Para quem é o BemVida+?</span>
+        <h2 class="titulo-secao">Feito para dois públicos</h2>
+      </div>
 
-        <div class="card card-campanha">
-          <div class="img-placeholder">[ imagem ]</div>
-          <span class="eyebrow">ALIMENTOS</span>
-          <h3>Cestas para famílias</h3>
-          <div class="barra-progresso"><span style="width:70%;"></span></div>
-          <div class="progresso-texto">
-            <span>210 de 300 itens recebidos</span>
-            <span>70%</span>
+      <div class="grade-2">
+        <div class="card">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l6 3v7"/></svg>
           </div>
-          <div class="acoes">
-            <a href="campanha-detalhes.html" class="botao botao-escuro">Doar</a>
-            <a href="campanha-detalhes.html" class="botao botao-secundario">Ver mais</a>
-          </div>
+          <h3>ONGs e Associações</h3>
+          <p>Divulgam e gerenciam campanhas, organizam suas arrecadações e disponibilizam informações aos doadores.</p>
         </div>
-
-        <div class="card card-campanha">
-          <div class="img-placeholder">[ imagem ]</div>
-          <span class="eyebrow">ROUPAS</span>
-          <h3>Agasalhos para o inverno</h3>
-          <div class="barra-progresso"><span style="width:70%;"></span></div>
-          <div class="progresso-texto">
-            <span>84 de 120 itens recebidos</span>
-            <span>70%</span>
+        <div class="card">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 20.3l8.8-8.6a5 5 0 0 0 0-7.1z"/></svg>
           </div>
-          <div class="acoes">
-            <a href="campanha-detalhes.html" class="botao botao-escuro">Doar</a>
-            <a href="campanha-detalhes.html" class="botao botao-secundario">Ver mais</a>
-          </div>
+          <h3>Doadores</h3>
+          <p>Encontram campanhas, registram suas intenções de doação e acompanham suas contribuições.</p>
         </div>
+      </div>
 
-        <div class="card card-campanha">
-          <div class="img-placeholder">[ imagem ]</div>
-          <span class="eyebrow">HIGIENE</span>
-          <h3>Kits de cuidado pessoal</h3>
-          <div class="barra-progresso"><span style="width:54%;"></span></div>
-          <div class="progresso-texto">
-            <span>135 de 250 itens recebidos</span>
-            <span>54%</span>
-          </div>
-          <div class="acoes">
-            <a href="campanha-detalhes.html" class="botao botao-escuro">Doar</a>
-            <a href="campanha-detalhes.html" class="botao botao-secundario">Ver mais</a>
-          </div>
+    </div>
+  </section>
+
+  <!-- 5. Como funciona -->
+  <section class="secao" id="como-funciona">
+    <div class="container">
+      <div class="texto-centralizado" style="margin-bottom:48px;">
+        <span class="eyebrow">Como Funciona</span>
+        <h2 class="titulo-secao">Do interesse à confirmação, em quatro passos</h2>
+      </div>
+
+      <div class="etapas">
+        <div class="etapa">
+          <div class="etapa-numero">1</div>
+          <h3>Encontre uma campanha</h3>
+          <p>Explore campanhas e confira o que está sendo arrecadado, onde e até quando.</p>
         </div>
-
+        <div class="etapa">
+          <div class="etapa-numero">2</div>
+          <h3>Registre sua intenção</h3>
+          <p>Informe quais itens físicos você pretende doar e a quantidade.</p>
+        </div>
+        <div class="etapa">
+          <div class="etapa-numero">3</div>
+          <h3>Entregue sua doação</h3>
+          <p>Confira o ponto de coleta indicado pela campanha e realize a entrega.</p>
+        </div>
+        <div class="etapa">
+          <div class="etapa-numero">4</div>
+          <h3>Acompanhe</h3>
+          <p>Veja o status da sua doação e a confirmação de recebimento pela instituição.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Como funciona -->
+  <!-- 6. Principais funcionalidades -->
+  <section class="secao secao-alt" id="funcionalidades">
+    <div class="container">
+      <div class="texto-centralizado" style="margin-bottom:48px;">
+        <span class="eyebrow">Principais Funcionalidades</span>
+        <h2 class="titulo-secao">O que o BemVida+ oferece</h2>
+      </div>
+
+      <div class="grade-3">
+        <div class="card">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM16 8a5 5 0 0 1 0 8M19 5a9 9 0 0 1 0 14"/></svg>
+          </div>
+          <h3>Campanhas de doação</h3>
+          <p>Visualização de campanhas ativas com informações sobre necessidades, localização e prazo.</p>
+        </div>
+        <div class="card">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1zM7 5h10v15a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5zM9 11l2 2 4-4"/></svg>
+          </div>
+          <h3>Registro de doação</h3>
+          <p>Registro da intenção de doar itens físicos, informando tipo e quantidade.</p>
+        </div>
+        <div class="card">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <h3>Pontos de coleta</h3>
+          <p>Localização dos pontos de coleta relacionados às campanhas.</p>
+        </div>
+        <div class="card">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10M10 19V5M16 19v-7M4 19h16"/></svg>
+          </div>
+          <h3>Acompanhamento de doações</h3>
+          <p>Acompanhamento do status da contribuição e confirmação de seu recebimento.</p>
+        </div>
+        <div class="card">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </div>
+          <h3>Busca e filtros</h3>
+          <p>Busca de campanhas por categoria, localização e palavras-chave.</p>
+        </div>
+        <div class="card">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9zM13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          </div>
+          <h3>Informações e atualizações</h3>
+          <p>Acesso a atualizações, imagens e relatórios disponibilizados pelas instituições.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Perfis de acesso -->
   <section class="secao">
     <div class="container">
-      <span class="eyebrow">COMO FUNCIONA</span>
-      <h2 style="margin-bottom:24px;">Uma rede de solidariedade</h2>
+      <div class="texto-centralizado" style="margin-bottom:48px;">
+        <span class="eyebrow">Perfis de Acesso</span>
+        <h2 class="titulo-secao">Três perfis, diferentes responsabilidades</h2>
+      </div>
 
-      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
-        <div class="card" style="padding:20px;">
-          <span class="eyebrow">01</span>
-          <h3 style="font-size:1rem;">Para Doadores</h3>
-          <p>Escolha uma campanha e informe os itens físicos que deseja entregar.</p>
+      <div class="grade-3">
+        <div class="card card-perfil">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+          </div>
+          <h3>Doador</h3>
+          <p>Encontra campanhas, registra intenções de doação, consulta pontos de coleta e acompanha suas contribuições.</p>
         </div>
-        <div class="card" style="padding:20px;">
-          <span class="eyebrow">02</span>
-          <h3 style="font-size:1rem;">Para ONGs</h3>
-          <p>Divulgue necessidades reais e acompanhe os itens recebidos.</p>
+        <div class="card card-perfil">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V7l8-4 8 4v14M9 21v-6h6v6M4 21h16"/></svg>
+          </div>
+          <h3>ONG/Associação</h3>
+          <p>Realiza seu cadastro, gerencia campanhas e disponibiliza informações sobre as doações recebidas.</p>
         </div>
-        <div class="card" style="padding:20px;">
-          <span class="eyebrow">03</span>
-          <h3 style="font-size:1rem;">Nossa Missão</h3>
-          <p>Aproximar pessoas e instituições com transparência e organização.</p>
+        <div class="card card-perfil">
+          <div class="icone-linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"/></svg>
+          </div>
+          <h3>Administrador</h3>
+          <p>Valida instituições, gerencia usuários e realiza a moderação dos conteúdos da plataforma.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Chamada final -->
-  <section class="secao secao-alt">
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-      <div>
-        <span class="eyebrow">PARTICIPE</span>
-        <h2 style="margin-bottom:0;">Encontre uma campanha para apoiar</h2>
-      </div>
-      <a href="campanhas.html" class="botao botao-escuro">Ver todas as campanhas</a>
+  <!-- 8. Transparência -->
+  <section class="secao secao-transparencia">
+    <div class="container texto-centralizado">
+      <span class="eyebrow">Transparência</span>
+      <h2 class="titulo-secao">Mais transparência para quem doa</h2>
+      <p>O BemVida+ busca tornar o processo de doação mais transparente, permitindo que o doador acompanhe sua contribuição e tenha acesso à confirmação de recebimento pela instituição. As ONGs e associações também podem disponibilizar informações, imagens e relatórios sobre as campanhas e as doações recebidas.</p>
+      <p class="frase-destaque">"Doar é importante. Saber onde sua contribuição chegou também."</p>
     </div>
   </section>
 
+  <!-- 9. Equipe -->
+  <section class="secao secao-alt" id="equipe">
+    <div class="container">
+      <div class="texto-centralizado" style="margin-bottom:48px;">
+        <span class="eyebrow">Equipe</span>
+        <h2 class="titulo-secao">Nossa equipe</h2>
+      </div>
+
+      <div class="grade-3">
+        <div class="card card-equipe">
+          <div class="avatar-iniciais">M</div>
+          <span class="papel">Product Owner</span>
+          <h3>Matheus</h3>
+          <p>Responsável pela organização e atualização da documentação do projeto.</p>
+        </div>
+        <div class="card card-equipe">
+          <div class="avatar-iniciais">L</div>
+          <span class="papel">Scrum Master</span>
+          <h3>Luís</h3>
+          <p>Responsável pela organização dos protótipos e apoio à organização do projeto.</p>
+        </div>
+        <div class="card card-equipe">
+          <div class="avatar-iniciais">V</div>
+          <span class="papel">Developer</span>
+          <h3>Vitor</h3>
+          <p>Responsável pelo desenvolvimento e testes do site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Tecnologias -->
+  <section class="secao">
+    <div class="container texto-centralizado">
+      <span class="eyebrow">Tecnologias Utilizadas</span>
+      <h2 class="titulo-secao" style="margin-bottom:32px;">Construído com</h2>
+
+      <div class="lista-tecnologias">
+        <div class="badge-tecnologia"><span class="ponto"></span> HTML</div>
+        <div class="badge-tecnologia"><span class="ponto"></span> CSS</div>
+        <div class="badge-tecnologia"><span class="ponto"></span> GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CTA Final -->
+  <section class="secao cta-final">
+    <div class="container">
+      <h2>Transformando intenção em ação</h2>
+      <p>Encontre uma campanha, escolha como contribuir e acompanhe sua doação de forma mais organizada e transparente.</p>
+      <a href="sistema/index.html" class="botao botao-primario">Explorar campanhas</a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
   <footer class="rodape">
-    [ links institucionais · contato · termos ]
+    Projeto Integrador — Fatec · BemVida+ · <a href="#">código-fonte no GitHub</a>
   </footer>
 
 </body>
