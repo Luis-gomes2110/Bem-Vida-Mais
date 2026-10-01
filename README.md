@@ -1,46 +1,72 @@
-# 🤝 BemVida+ - Plataforma de Gerenciamento de Doações
+# 🤝 BemVida+ — Plataforma de Gerenciamento de Doações
 
-> **Trabalho de Graduação** | Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (ADS)  
-> **Instituição:** Faculdade de Tecnologia de Ferraz de Vasconcelos (Fatec)  
-> **Orientadores:**   
+> **Projeto Integrador** | Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (ADS)  
+> **Instituição:** Faculdade de Tecnologia de Ferraz de Vasconcelos (Fatec)
 
 ---
 
 ## 📋 Sobre o Projeto
 
-O **BemVida+** é uma plataforma web centralizada desenvolvida para otimizar o gerenciamento e a distribuição de doações (alimentos, roupas, sangue e outros itens essenciais). O sistema conecta doadores, ONGs/associações e administradores públicos, promovendo **transparência**, rastreabilidade e facilidade no processo de doação.
+O **BemVida+** é uma plataforma digital desenvolvida para facilitar o gerenciamento e o acompanhamento de campanhas de doação, conectando **doadores, ONGs e associações** em um único ambiente.
 
-### 🎯 Problema & Solução
-* **Problema:** Ausência de um sistema oficial e centralizado para gestão de doações, além do baixo índice de confiança nas campanhas devido à falta de transparência e ocorrência de golpes digitais.
-* **Solução:** Uma plataforma centralizada com acompanhamento do destino das doações, validação de ONGs participantes e canal oficial para campanhas locais.
+A plataforma tem como foco a **transparência e a confiança no processo de doação**, permitindo que os usuários encontrem campanhas, registrem intenções de doação de itens físicos e acompanhem o status de suas contribuições.
+
+### 🎯 Problema
+
+ONGs e associações podem enfrentar dificuldades para divulgar campanhas, organizar as doações e manter informações atualizadas. Para os doadores, a falta de informações centralizadas pode dificultar o acompanhamento das contribuições e gerar insegurança durante o processo.
+
+### 💡 Solução
+
+O BemVida+ centraliza informações sobre campanhas de doação e aproxima doadores de instituições, oferecendo recursos para divulgação de campanhas, registro de intenções de doação, localização de pontos de coleta, acompanhamento e confirmação de recebimento.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Front-end:** React.js / HTML5, CSS3, JavaScript]
-* **Back-end:** Node.js / Java 
-* **Banco de Dados:** MySQL*
-* **Metodologia:** Kanban*
+- **HTML5** — estrutura das páginas
+- **CSS3** — estilização e layout
+- **Git / GitHub** — versionamento e gerenciamento do código
 
 ---
 
-## ✨ Funcionalidades Principais
+## ✨ Principais Funcionalidades
 
-- [x] **Cadastro e Autenticação:** Doadores, ONGs e Administradores (com criptografia e segurança).
-- [x] **Gestão de Campanhas:** Criação, edição e exclusão de campanhas de arrecadação por ONGs/Admins.
-- [x] **Registro e Acompanhamento de Doações:** Notificação e transparência sobre a entrega do item doado.
-- [x] **Busca e Filtro:** Pesquisa de campanhas por categoria (sangue, alimentos, roupas) e localização.
-- [x] **Pontos de Coleta:** Integração com mapas para localização de postos próximos ao doador.
-- [x] **Painel de Validação:** Aprovação e auditoria de ONGs e usuários pelo Administrador.
+- [x] **Cadastro e Login** — acesso dos usuários à plataforma.
+- [x] **Campanhas de Doação** — visualização e gerenciamento de campanhas pelas instituições.
+- [x] **Registro de Intenção de Doação** — registro do tipo e quantidade de itens físicos que o usuário pretende doar.
+- [x] **Pontos de Coleta** — informações sobre locais para entrega das doações.
+- [x] **Acompanhamento de Doações** — acompanhamento do status e confirmação de recebimento.
+- [x] **Busca e Filtros** — localização de campanhas por categoria e localização.
+- [x] **Transparência** — publicação de informações, imagens e relatórios relacionados às campanhas.
 
 ---
 
-## 👥 Equipe de Desenvolvimento
+## 👥 Perfis de Acesso
 
-| Integrante | Papel no Scrum | GitHub |
-| :--- | :--- | :--- |
-| **Luís Henrique Gomes Cicone de Paula** | Scrum Master / Developer |  |
-| **Matheus da Silva Zanchett** | Product Owner Developer |  |
-| **Vitor Alex Maximo freire** | Developer |  |
+### 👤 Usuário Doador
+Visualiza campanhas, registra intenções de doação, localiza pontos de coleta e acompanha suas contribuições.
+
+### 🏢 ONG/Associação
+Realiza seu cadastro, gerencia campanhas e disponibiliza informações sobre as doações recebidas.
+
+### 🛡️ Administrador
+Valida ONGs e associações, gerencia usuários e realiza a moderação dos conteúdos da plataforma.
+
+---
+
+## 👨‍💻 Equipe de Desenvolvimento
+
+| Integrante | Papel no Scrum |
+| :--- | :--- |
+| **Luís Henrique Gomes Cicone de Paula** | Scrum Master |
+| **Matheus da Silva Zanchett** | Product Owner |
+| **Vitor Alex Maximo Freire** | Developer |
+
+---
+
+## 📌 Status do Projeto
+
+O projeto encontra-se em desenvolvimento, com **protótipos de interface, wireframes e implementação inicial em HTML e CSS**.
+
+O presente repositório contém a implementação do protótipo desenvolvido para o Projeto Integrador.
 
