@@ -64,6 +64,13 @@ Valida ONGs e associações, gerencia usuários e realiza a moderação dos cont
 
 ---
 
+## 🔗 Links
+
+- 🌐 **Site publicado:** https://luis-gomes2110.github.io/Bem-Vida-Mais/
+- 💻 **Repositório:** https://github.com/Luis-gomes2110/Bem-Vida-Mais
+
+---
+
 ## 📌 Status do Projeto
 
 O projeto encontra-se em desenvolvimento, com **protótipos de interface, wireframes e implementação inicial em HTML e CSS**.
